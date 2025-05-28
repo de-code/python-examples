@@ -13,4 +13,4 @@ class TestMcp:
         )
         assert result
         assert isinstance(result[0], TextContent)
-        assert result[0].text == '3.0'
+        assert result[0].text == '3'
