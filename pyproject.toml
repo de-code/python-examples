@@ -21,7 +21,8 @@ dev = [
 max-line-length = 68
 disable = """
     missing-docstring,
-    too-few-public-methods
+    too-few-public-methods,
+    duplicate-code
 """
 
 [tool.pytest-watcher]
