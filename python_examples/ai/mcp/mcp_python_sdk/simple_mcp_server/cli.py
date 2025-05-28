@@ -6,7 +6,7 @@ from .server import mcp
 
 def main() -> None:
     mcp.run(
-        transport=os.environ.get(  # type: ignore[arg-type]
+        transport=os.getenv(  # type: ignore[arg-type]
             'MCP_TRANSPORT',
             'streamable-http'
         )
