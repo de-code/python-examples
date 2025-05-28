@@ -1,10 +1,11 @@
 import logging
 import os
 
-from .server import mcp
+from .server import create_mcp
 
 
 def main() -> None:
+    mcp = create_mcp()
     mcp.run(
         transport=os.getenv(  # type: ignore[arg-type]
             'MCP_TRANSPORT',

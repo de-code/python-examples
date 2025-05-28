@@ -5,6 +5,6 @@ mcp = FastMCP(name='Example MCP Server')
 
 
 @mcp.tool()
-async def add_numbers(a: float, b: float) -> float:
+async def add_numbers(a: int, b: int) -> int:
     """Add two numbers."""
     return a + b
