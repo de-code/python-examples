@@ -38,3 +38,4 @@ make dev-test
 ## Examples
 
 - [CLI Examples](python_examples/cli)
+- [MCP Examples](python_examples/ai/mcp)
