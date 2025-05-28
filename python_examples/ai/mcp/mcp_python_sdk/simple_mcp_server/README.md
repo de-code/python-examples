@@ -4,7 +4,7 @@
 
 ```console
 $ python -m python_examples.ai.mcp.mcp_python_sdk.simple_mcp_server.cli
-INFO:     Started server process [207445]
+INFO:     Started server process [123456]
 INFO:     Waiting for application startup.
 [05/28/25 01:02:03] INFO     StreamableHTTP    streamable_http_manager.py:109
                              session manager
