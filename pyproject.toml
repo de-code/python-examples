@@ -30,6 +30,11 @@ disable = """
     duplicate-code
 """
 
+[tool.pytest.ini_options]
+filterwarnings = [
+    "error"
+]
+
 [tool.pytest-watcher]
 now = true
 clear = false
