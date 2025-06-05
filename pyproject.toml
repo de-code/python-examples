@@ -9,6 +9,7 @@ dependencies = [
     "fastapi[standard]>=0.115.12",
     "fastmcp>=2.6.1",
     "mcp[cli]>=1.9.1",
+    "pyyaml>=6.0.2",
     "smolagents[gradio,openai]>=1.17.0",
 ]
 
@@ -20,6 +21,7 @@ dev = [
     "pytest>=8.3.5",
     "pytest-asyncio>=1.0.0",
     "pytest-watcher>=0.4.3",
+    "types-pyyaml>=6.0.12.20250516",
 ]
 
 [tool.pylint.'MESSAGES CONTROL']
