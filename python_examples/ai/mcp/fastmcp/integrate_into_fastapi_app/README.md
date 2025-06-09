@@ -5,11 +5,13 @@ Simple [FastMCP server integrated into FastAPI App](https://gofastmcp.com/deploy
 ## Run
 
 ```console
-$ uv run uvicorn python_examples.ai.mcp.fastmcp.integrate_into_fastapi_app.server:app
-INFO:     Started server process [97367]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+$ uv run fastapi dev python_examples/ai/mcp/fastmcp/integrate_into_fastapi_app/server.py
+...
+INFO   Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO   Started reloader process [425543] using WatchFiles
+INFO   Started server process [425567]
+INFO   Waiting for application startup.
+INFO   Application startup complete.
 ```
 
 Streamable MCP Server available under: `http://127.0.0.1:8000/example/mcp`
