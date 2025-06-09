@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from fastapi_mcp import FastApiMCP
+from fastapi_mcp import FastApiMCP  # type: ignore[import-untyped]
 
 
 app = FastAPI(title="MCP Server API", version="0.0.1")
