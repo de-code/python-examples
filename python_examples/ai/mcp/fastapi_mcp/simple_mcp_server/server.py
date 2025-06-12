@@ -16,4 +16,4 @@ async def add_numbers(a: int, b: int) -> int:
 
 
 mcp = FastApiMCP(app)
-mcp.mount()
+mcp.mount(mount_path="/sse", transport="sse")

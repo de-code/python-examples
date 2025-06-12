@@ -11,7 +11,7 @@ INFO   Waiting for application startup.
 INFO   Application startup complete.
 ```
 
-The regular FastAPI server will be available on port `8000` with the MCP server mounted in `SSE` mode on `/mcp`.
+The regular FastAPI server will be available on port `8000` with the MCP server mounted in `SSE` mode on `/sse`.
 
 That means you can interact with the tool directly via the REST API on `/add_numbers` (or use `/docs`).
 
