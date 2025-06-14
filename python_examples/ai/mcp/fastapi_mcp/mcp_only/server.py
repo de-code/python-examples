@@ -11,7 +11,6 @@ rest_app = FastAPI(title="MCP Server API", version="0.0.1")
     description="Add two numbers"
 )
 async def add_numbers(a: int, b: int) -> int:
-    """Add two numbers."""
     return a + b
 
 app = FastAPI(title="MCP Server API", version="0.0.1")
