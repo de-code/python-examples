@@ -4,3 +4,4 @@ The following examples demonstrate usage of the [FastAPI-MCP](https://github.com
 
 - [simple_mcp_server](simple_mcp_server)
 - [mcp_only](mcp_only)
+- [generated_tool_description](generated_tool_description)
