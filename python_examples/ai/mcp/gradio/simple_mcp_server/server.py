@@ -1,7 +1,7 @@
 import gradio as gr
 
 
-def add_numbers(a: float, b: float) -> float:
+def add_numbers(a: int, b: int) -> int:
     """Add two numbers"""
     return a + b
 
