@@ -21,4 +21,9 @@ demo = gr.Interface(
 mcp_server = GradioMCPServer(demo)
 
 app = FastAPI(lifespan=mcp_server.lifespan)
-app.mount("/mcp", app=mcp_server.handle_streamable_http)
+
+mcp_server.launch_mcp_on_sse(
+    app=app,
+    subpath="/mcp",
+    root_path="/dummy_root_path"
+)
