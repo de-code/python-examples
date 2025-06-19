@@ -7,5 +7,6 @@ The following examples demonstrate creating an MCP server using [Gradio](https:/
 - [custom_input_api_info](custom_input_api_info)
 - [multiple_tools](multiple_tools)
 - [gradio_mcp_server](gradio_mcp_server)
+- [gradio_mcp_server_incl_sse](gradio_mcp_server_incl_sse)
 
 Note: these examples focus on the MCP server, rather than Gradio as a whole.
