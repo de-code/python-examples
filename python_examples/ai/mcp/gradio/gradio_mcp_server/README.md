@@ -11,7 +11,5 @@ $ uv run fastapi dev python_examples/ai/mcp/gradio/gradio_mcp_server/server.py
       INFO   Application startup complete.
 ```
 
-The MCP server will be available with the two transport modes:
+The MCP server will be available in the `Streamable HTTP` transport mode: `http://127.0.0.1:8000/mcp/`
 
-- Streamable HTTP: `http://127.0.0.1:8000/mcp/http/`
-- SSE (deprecated): `http://127.0.0.1:8000/mcp/sse`
