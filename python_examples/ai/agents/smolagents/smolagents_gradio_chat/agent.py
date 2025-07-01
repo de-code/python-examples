@@ -25,10 +25,12 @@ def get_model() -> Model:
             'https://api.openai.com/v1'
         ),
         api_key=os.environ['OPENAI_API_KEY'],
-        flatten_messages_as_text=TypeAdapter(bool).validate_strings(os.getenv(
-            'OPENAI_FLATTEN_MESSAGES',
-            'false'
-        ))
+        flatten_messages_as_text=(
+            TypeAdapter(bool).validate_strings(os.getenv(
+                'OPENAI_FLATTEN_MESSAGES',
+                'false'
+            ))
+        )
     )
 
 
