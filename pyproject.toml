@@ -12,7 +12,7 @@ dependencies = [
     "gradio>=5.33.2",
     "mcp[cli]>=1.9.1",
     "pyyaml>=6.0.2",
-    "smolagents[gradio,openai]>=1.17.0",
+    "smolagents[gradio,mcp,openai]>=1.17.0",
 ]
 
 [dependency-groups]

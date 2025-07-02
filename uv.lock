@@ -689,6 +689,15 @@ wheels = [
 ]
 
 [[package]]
+name = "jsonref"
+version = "1.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/aa/0d/c1f3277e90ccdb50d33ed5ba1ec5b3f0a242ed8c1b1a85d3afeb68464dca/jsonref-1.1.0.tar.gz", hash = "sha256:32fe8e1d85af0fdefbebce950af85590b22b60f9e95443176adbde4e1ecea552", size = 8814, upload-time = "2023-01-16T16:10:04.455Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0c/ec/e1db9922bceb168197a558a2b8c03a7963f1afe93517ddd3cf99f202f996/jsonref-1.1.0-py3-none-any.whl", hash = "sha256:590dc7773df6c21cbf948b5dac07a72a251db28b0238ceecce0a2abfa8ec30a9", size = 9425, upload-time = "2023-01-16T16:10:02.255Z" },
+]
+
+[[package]]
 name = "lxml"
 version = "5.4.0"
 source = { registry = "https://pypi.org/simple" }
@@ -813,6 +822,21 @@ wheels = [
 cli = [
     { name = "python-dotenv" },
     { name = "typer" },
+]
+
+[[package]]
+name = "mcpadapt"
+version = "0.1.10"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "jsonref" },
+    { name = "mcp" },
+    { name = "pydantic" },
+    { name = "python-dotenv" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/54/50/4d8e732b2dcc13e41f5db0fad18d4561c60f538f80a84fed1eb2dc785e5f/mcpadapt-0.1.10.tar.gz", hash = "sha256:0269a720dc198a64788c8bd916ad5022c79ff3ea98efaf5c141b705354fd7f42", size = 3542362, upload-time = "2025-06-14T09:28:14.073Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f2/31/6fc2b860cbd6cd111b7d7a7a0e83d8b3305a8da6cd7e9d2217b6fcec919b/mcpadapt-0.1.10-py3-none-any.whl", hash = "sha256:21d6159a57e9d428ce839d394b21ba9aa3ab255b8075f40cc2772dc50579989f", size = 18004, upload-time = "2025-06-14T09:28:12.046Z" },
 ]
 
 [[package]]
@@ -1301,7 +1325,7 @@ dependencies = [
     { name = "gradio" },
     { name = "mcp", extra = ["cli"] },
     { name = "pyyaml" },
-    { name = "smolagents", extra = ["gradio", "openai"] },
+    { name = "smolagents", extra = ["gradio", "mcp", "openai"] },
 ]
 
 [package.dev-dependencies]
@@ -1325,7 +1349,7 @@ requires-dist = [
     { name = "gradio", specifier = ">=5.33.2" },
     { name = "mcp", extras = ["cli"], specifier = ">=1.9.1" },
     { name = "pyyaml", specifier = ">=6.0.2" },
-    { name = "smolagents", extras = ["gradio", "openai"], specifier = ">=1.17.0" },
+    { name = "smolagents", extras = ["gradio", "mcp", "openai"], specifier = ">=1.17.0" },
 ]
 
 [package.metadata.requires-dev]
@@ -1509,6 +1533,10 @@ wheels = [
 [package.optional-dependencies]
 gradio = [
     { name = "gradio" },
+]
+mcp = [
+    { name = "mcp" },
+    { name = "mcpadapt" },
 ]
 openai = [
     { name = "openai" },
