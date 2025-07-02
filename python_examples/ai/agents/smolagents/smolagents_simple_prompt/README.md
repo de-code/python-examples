@@ -1,4 +1,4 @@
-# Smolagents Gradio Chat
+# Smolagents Simple Prompt
 
 In this example we are using [smolagents](https://github.com/huggingface/smolagents) with a fixed prompt that should trigger it to use the web search tool.
 
