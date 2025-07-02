@@ -6,3 +6,4 @@ The following examples demonstrate the usage of [smolagents](https://github.com/
 - [smolagents_simple_prompt](smolagents_simple_prompt)
 - [smolagents_custom_tool_function](smolagents_custom_tool_function)
 - [smolagents_custom_tool_class](smolagents_custom_tool_class)
+- [smolagents_mcp_stdio](smolagents_mcp_stdio)

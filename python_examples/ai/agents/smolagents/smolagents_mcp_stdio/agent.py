@@ -3,13 +3,14 @@ import os
 
 from dotenv import load_dotenv
 
+from mcp import StdioServerParameters
 from pydantic import TypeAdapter
 
 from smolagents import (  # type: ignore[import-untyped]
     GradioUI,
     Model,
     OpenAIServerModel,
-    Tool,
+    ToolCollection,
     ToolCallingAgent
 )
 
@@ -37,42 +38,28 @@ def get_model() -> Model:
     )
 
 
-class AddNumbersTool(Tool):
-    name = "add_numbers"
-    description = "Adds two numbers."
-    inputs = {
-        "a": {
-            "type": "integer",
-            "description": "The first number"
-        },
-        "b": {
-            "type": "integer",
-            "description": "The second number"
-        }
-    }
-    output_type = "integer"
-
-    def forward(  # pylint: disable=arguments-differ # type: ignore
-        self,
-        a: int,
-        b: int
-    ) -> int:
-        return a + b
-
-
 def main():
     model = get_model()
 
-    agent = ToolCallingAgent(
-        tools=[AddNumbersTool()],
-        add_base_tools=False,
-        model=model,
-        max_steps=3
+    server_parameters = StdioServerParameters(
+        command="uvx",
+        args=["mcp-server-calculator"],
     )
 
-    LOGGER.info("System prompt:\n%s\n", agent.system_prompt)
+    with ToolCollection.from_mcp(
+        server_parameters,
+        trust_remote_code=True
+    ) as tool_collection:
+        agent = ToolCallingAgent(
+            tools=[*tool_collection.tools],
+            add_base_tools=False,
+            model=model,
+            max_steps=3
+        )
 
-    GradioUI(agent).launch(share=False)
+        LOGGER.info("System prompt:\n%s\n", agent.system_prompt)
+
+        GradioUI(agent).launch(share=False)
 
 
 if __name__ == "__main__":
