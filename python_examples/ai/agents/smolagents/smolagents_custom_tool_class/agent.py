@@ -50,7 +50,7 @@ class AddNumbersTool(Tool):
             "description": "The second number"
         }
     }
-    output_type = 'integer'
+    output_type = "integer"
 
     def forward(  # pylint: disable=arguments-differ # type: ignore
         self,
