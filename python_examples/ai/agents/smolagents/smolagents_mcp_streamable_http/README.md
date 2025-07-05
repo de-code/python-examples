@@ -32,7 +32,7 @@ INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 This expects the MCP server to be available on `http://127.0.0.1:8000/mcp`
 
 ```console
-$ uv run -m python_examples.ai.agents.smolagents.smolagents_mcp_stdio.agent
+$ uv run -m python_examples.ai.agents.smolagents.smolagents_mcp_streamable_http.agent
 * Running on local URL:  http://127.0.0.1:7860
 ...
 ```
