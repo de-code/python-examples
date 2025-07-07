@@ -39,7 +39,7 @@ dev-lint: dev-flake8 dev-pylint dev-mypy
 
 
 dev-unit-tests:
-	$(PYTHON) -m pytest
+	$(PYTHON) -m pytest -vv
 
 dev-watch:
 	$(PYTHON) -m pytest_watcher \
