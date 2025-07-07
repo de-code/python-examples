@@ -20,6 +20,9 @@ venv-create:
 dev-install:
 	$(UV) sync
 
+dev-upgrade-all:
+	$(UV) sync --upgrade
+
 dev-venv: venv-create dev-install
 
 
@@ -36,7 +39,7 @@ dev-lint: dev-flake8 dev-pylint dev-mypy
 
 
 dev-unit-tests:
-	$(PYTHON) -m pytest
+	$(PYTHON) -m pytest -vv
 
 dev-watch:
 	$(PYTHON) -m pytest_watcher \

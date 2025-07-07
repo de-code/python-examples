@@ -10,7 +10,7 @@ dependencies = [
     "fastapi[standard]>=0.115.12",
     "fastmcp>=2.6.1",
     "gradio>=5.33.2",
-    "mcp[cli]>=1.9.1",
+    "mcp[cli]==1.9.4",
     "pyyaml>=6.0.2",
     "smolagents[gradio,mcp,openai]>=1.17.0",
 ]
