@@ -16,5 +16,5 @@ In this example we are using [smolagents](https://github.com/huggingface/smolage
 ```console
 $ uv run -m python_examples.ai.agents.smolagents.smolagents_multi_agent.agent
 ...
-Out - Final answer: banana
+<a poem about bananas>
 ```
