@@ -80,7 +80,8 @@ def main():
             """
             Writes text like poems for you.
             """
-        )
+        ),
+        # provide_run_summary=True
     )
 
     reviewer_agent_1 = ToolCallingAgent(
@@ -94,7 +95,8 @@ def main():
             Prefers a concise and clear style.
             Please provide constructive feedback.
             """
-        )
+        ),
+        # provide_run_summary=True
     )
 
     reviewer_agent_2 = ToolCallingAgent(
@@ -107,7 +109,8 @@ def main():
             Reviews text for you. Prefers a great ending.
             Please provide constructive feedback.
             """
-        )
+        ),
+        # provide_run_summary=True
     )
 
     manager_agent = CodeAgent(
