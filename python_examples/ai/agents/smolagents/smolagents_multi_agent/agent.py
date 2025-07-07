@@ -107,7 +107,7 @@ def main():
             Reviews text for you. Prefers a great ending.
             Please provide constructive feedback.
             """
-        ),
+        )
     )
 
     manager_agent = CodeAgent(
@@ -116,7 +116,7 @@ def main():
         model=model,
         managed_agents=[
             writer_agent, reviewer_agent_1, reviewer_agent_2
-        ],
+        ]
     )
 
     manager_agent.run(
