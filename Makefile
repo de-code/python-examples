@@ -20,6 +20,9 @@ venv-create:
 dev-install:
 	$(UV) sync
 
+dev-upgrade-all:
+	$(UV) sync --upgrade
+
 dev-venv: venv-create dev-install
 
 
