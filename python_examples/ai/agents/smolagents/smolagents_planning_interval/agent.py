@@ -6,9 +6,9 @@ from dotenv import load_dotenv
 from pydantic import TypeAdapter
 
 from smolagents import (  # type: ignore[import-untyped]
-    DuckDuckGoSearchTool,
     Model,
     OpenAIServerModel,
+    tool,
     ToolCallingAgent
 )
 
@@ -33,18 +33,52 @@ def get_model() -> Model:
     )
 
 
+PRICE_BY_PRODUCT = {
+    "apple": 1.0,
+    "banana": 0.5,
+    "orange": 0.75,
+    "grape": 2.0,
+    "watermelon": 3.0
+}
+
+
+@tool
+def get_product_names() -> list[str]:
+    """
+    Get's the product names.
+
+    Returns:
+        list[str]: The product names.
+    """
+    return list(PRICE_BY_PRODUCT.keys())
+
+
+@tool
+def get_product_price(product_name: str) -> float:
+    """
+    Get's the product price.
+
+    Args:
+        product_name (str): The product name.
+
+    Returns:
+        float: The product price.
+    """
+    return PRICE_BY_PRODUCT[product_name]
+
+
 def main():
     model = get_model()
 
     agent = ToolCallingAgent(
-        tools=[DuckDuckGoSearchTool()],
+        tools=[get_product_names, get_product_price],
         add_base_tools=False,
         model=model,
-        planning_interval=3
+        planning_interval=2
     )
     agent.run(
-        'Investigate the health benefits of bananas,'
-        ' with web sources. Only use English sources.'
+        'Check the available products and optimize'
+        ' select products totalling less than £3.'
     )
 
 
