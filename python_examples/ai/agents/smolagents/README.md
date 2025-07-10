@@ -9,4 +9,5 @@ The following examples demonstrate the usage of [smolagents](https://github.com/
 - [smolagents_mcp_stdio](smolagents_mcp_stdio)
 - [smolagents_mcp_streamable_http](smolagents_mcp_streamable_http)
 - [smolagents_code_agent](smolagents_code_agent)
+- [smolagents_telemetry](smolagents_telemetry)
 - [smolagents_multi_agent](smolagents_multi_agent)
