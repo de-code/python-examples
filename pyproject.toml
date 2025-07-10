@@ -11,12 +11,16 @@ dependencies = [
     "fastmcp>=2.6.1",
     "gradio>=5.33.2",
     "mcp[cli]==1.9.4",
+    "openinference-instrumentation-smolagents>=0.1.14",
+    "opentelemetry-exporter-otlp>=1.34.1",
+    "opentelemetry-sdk>=1.34.1",
     "pyyaml>=6.0.2",
     "smolagents[gradio,mcp,openai]>=1.17.0",
 ]
 
 [dependency-groups]
 dev = [
+    "arize-phoenix>=11.6.2",
     "flake8>=7.2.0",
     "mypy>=1.15.0",
     "pylint>=3.3.7",
