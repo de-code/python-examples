@@ -1,6 +1,6 @@
-# Smolagents Telemetry
+# Smolagents Telemetry using Arize Phoenix directly
 
-In this example we are using [smolagents](https://github.com/huggingface/smolagents) together with [Arize Phoenix](https://github.com/Arize-ai/phoenix) for monitoring.
+In this example we are using [smolagents](https://github.com/huggingface/smolagents) together with [Arize Phoenix](https://github.com/Arize-ai/phoenix) directly for monitoring. The approach requires the `arize-phoenix` dependency as part of your agent.
 
 ## Environment Variables
 
@@ -28,7 +28,7 @@ $ uv run -m phoenix.server.main serve
 ## Run
 
 ```console
-$ uv run -m python_examples.ai.agents.smolagents.smolagents_telemetry.agent
+$ uv run -m python_examples.ai.agents.smolagents.smolagents_telemetry_phoenix.agent
 ...
 ```
 
