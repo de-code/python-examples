@@ -1,3 +1,4 @@
+from argparse import ArgumentParser
 import logging
 import os
 
@@ -68,13 +69,17 @@ def get_product_price(product_name: str) -> float:
 
 
 def main():
+    parser = ArgumentParser()
+    parser.add_argument('--planning-interval', type=int)
+    args = parser.parse_args()
+
     model = get_model()
 
     agent = ToolCallingAgent(
         tools=[get_product_names, get_product_price],
         add_base_tools=False,
         model=model,
-        planning_interval=2
+        planning_interval=args.planning_interval
     )
     agent.run(
         'Check the available products and optimize'
