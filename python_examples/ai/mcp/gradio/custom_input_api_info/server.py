@@ -6,22 +6,21 @@ def dummy_fn(a: int) -> int:
     return a
 
 
-def get_integer(*args, precision: int = 0, **kwargs) -> gr.Number:
-    assert precision == 0
-    number = gr.Number(*args, precision=precision, **kwargs)
-    number.api_info = (  # type: ignore[method-assign]
-        lambda: {"type": "integer"}
+def get_some_id(*args, **kwargs) -> gr.Textbox:
+    some_id = gr.Textbox(*args, **kwargs)
+    some_id.api_info = (  # type: ignore[method-assign]
+        lambda: {"type": "string", "minLength": 2, "maxLength": 10}
     )
-    return number
+    return some_id
 
 
 demo = gr.Interface(
     fn=dummy_fn,
     api_name="dummy_fn",
     inputs=[
-        get_integer(),
+        get_some_id(),
     ],
-    outputs=[get_integer()]
+    outputs=[get_some_id()]
 )
 
 
