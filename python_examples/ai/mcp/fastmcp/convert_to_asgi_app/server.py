@@ -10,4 +10,8 @@ async def add_numbers(a: int, b: int) -> int:
     return a + b
 
 
-http_app = mcp.http_app(json_response=True, stateless_http=True)
+http_app = mcp.http_app(
+    path="/mcp",
+    json_response=True,
+    stateless_http=True
+)
