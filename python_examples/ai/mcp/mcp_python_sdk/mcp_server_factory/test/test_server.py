@@ -22,9 +22,11 @@ class TestMcp:
             "add_numbers",
             arguments={"a": 1, "b": 2}
         )
-        # mcp SDK annotation mismatch: returns tuple[list, dict] at runtime
-        # https://github.com/modelcontextprotocol/python-sdk/issues/1251
-        content = cast(list[TextContent], result[0])  # type: ignore[index]
+        # mcp SDK annotation mismatch: returns tuple at runtime
+        # github.com/modelcontextprotocol/python-sdk/issues/1251
+        content = cast(
+            list[TextContent], result[0]  # type: ignore[index]
+        )
         assert content
         assert isinstance(content[0], TextContent)
         assert content[0].text == '3'
