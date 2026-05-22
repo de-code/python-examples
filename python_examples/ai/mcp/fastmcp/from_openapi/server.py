@@ -2,7 +2,7 @@ import yaml
 import httpx
 
 from fastmcp import FastMCP
-from fastmcp.server.openapi import RouteMap, MCPType
+from fastmcp.server.providers.openapi import RouteMap, MCPType
 
 
 client = httpx.AsyncClient(base_url="https://api.apis.guru/v2")

@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastmcp import FastMCP
-from fastmcp.server.openapi import RouteMap, MCPType
+from fastmcp.server.providers.openapi import RouteMap, MCPType
 
 
 app = FastAPI(title="MCP Server API", version="0.0.1")

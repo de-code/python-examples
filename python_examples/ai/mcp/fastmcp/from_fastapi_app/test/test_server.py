@@ -26,5 +26,5 @@ class TestMcp:
                 "add_numbers",
                 arguments={"a": 1, "b": 2}
             )
-            assert isinstance(result[0], TextContent)
-            assert result[0].text == '3'
+            assert isinstance(result.content[0], TextContent)
+            assert result.content[0].text == '{"result":3}'
